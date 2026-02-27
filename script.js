@@ -1,5 +1,49 @@
 const projects = [
   {
+    id: "eris",
+    title: "Economic Regime Intelligence System (ERIS)",
+    subtitle: "Regime-Aware ML · Asset Pricing Intelligence",
+    date: "2026",
+    description:
+      "ML system that predicts monthly stock returns, detects economic regimes, and delivers regime-specific stock screening insights.",
+    highlights: [
+      "Built a regime-aware neural network with macro-driven regime embeddings for return prediction.",
+      "Detected Bull/Transition/Bear regimes using HMM on macro variables and evaluated regime-conditional performance.",
+      "Produced long–short decile portfolio analytics with Sharpe, drawdown, and alpha tracking.",
+    ],
+    tags: ["Asset Pricing", "Regime Detection", "Neural Network", "HMM"],
+    kpis: [
+      { label: "Stock-Months", value: "1.03M" },
+      { label: "Features", value: "176" },
+      { label: "OOS Months", value: "144" },
+    ],
+    category: ["ml", "analytics"],
+    image: "assets/eris-futuristic-poster.png",
+    link: "https://github.com/Debadri1999/Economic-Regime-Intelligence-System",
+  },
+  {
+    id: "youtube-optimization",
+    title: "YouTube Optimization Intelligence Platform",
+    subtitle: "YouTube Data API · BERTopic · LLM Strategy",
+    date: "2026",
+    description:
+      "End-to-end analytics and recommendation system that turns public YouTube metadata into content strategy guidance.",
+    highlights: [
+      "Collected and processed channel/video metadata via YouTube Data API v3 for scalable analysis.",
+      "Modeled semantic content patterns with BERTopic to surface high-engagement topics.",
+      "Delivered creator-ready insights through a Streamlit dashboard with AI-assisted recommendations.",
+    ],
+    tags: ["YouTube API", "BERTopic", "Streamlit", "LLM Insights"],
+    kpis: [
+      { label: "Data Source", value: "YouTube API" },
+      { label: "Focus", value: "Creators" },
+      { label: "Delivery", value: "Dashboard" },
+    ],
+    category: ["ml", "nlp", "analytics"],
+    image: "assets/youtube-optimization-poster.png",
+    link: "https://github.com/Debadri1999/Youtube-Optmization",
+  },
+  {
     id: "ai-factuality",
     title: "AI Factuality Detection",
     subtitle: "NLP · Weighted Ensemble · Data4Good Competition",
@@ -21,6 +65,75 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80",
     link: "https://github.com/Debadri1999/AI-Factuality-Detection-ML",
+  },
+  {
+    id: "doubledo-gaming-chatbot",
+    title: "AI Chatbot for Gaming Industry",
+    subtitle: "Gaming Hardware Expert · Chatbase AI",
+    date: "Dec 2025",
+    description:
+      "A 24/7 gaming hardware expert assistant that delivers build recommendations, compatibility checks, and deal alerts.",
+    highlights: [
+      "Achieved an estimated 85%+ query resolution rate without human escalation.",
+      "Translated technical specs into budget-aware recommendations.",
+      "Designed FAQ coverage and quick actions for common customer needs.",
+    ],
+    tags: ["Conversational AI", "Chatbase", "Customer Support"],
+    kpis: [
+      { label: "Resolution Rate", value: "85%+" },
+      { label: "Response Time", value: "<3s" },
+      { label: "FAQ Coverage", value: "60+" },
+    ],
+    category: ["automation"],
+    image:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+    link: "Chatbot_Project/Doubledo_Gaming_AI_Chatbot_Report.pdf",
+  },
+  {
+    id: "nacho-nirvana-chatbot",
+    title: "Food Delivery Chatbot",
+    subtitle: "Chatfuel · Automated Ordering",
+    date: "Dec 2025",
+    description:
+      "Facebook Messenger chatbot for nacho ordering with dynamic pricing, customization, and order confirmation.",
+    highlights: [
+      "Built a 12-block conversational flow covering the full order journey.",
+      "Implemented attribute-based pricing for size, toppings, drinks, and sides.",
+      "Delivered menu navigation for classic vs loaded nacho categories.",
+    ],
+    tags: ["Chatbot", "Chatfuel", "Automation"],
+    kpis: [
+      { label: "Conversation Blocks", value: "12" },
+      { label: "Dynamic Pricing", value: "Yes" },
+      { label: "Order Flow", value: "End-to-End" },
+    ],
+    category: ["automation"],
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+    link: "Chatbot_Project/Nacho_Nirvana_Fixed_Chatbot_Report.pdf",
+  },
+  {
+    id: "gaming-laptop",
+    title: "Web Crawling Market Analysis",
+    subtitle: "Web Automation · Pricing Intelligence",
+    date: "Nov 2025",
+    description:
+      "Web-crawled laptop listings to benchmark price-performance and track competitive market positioning.",
+    highlights: [
+      "Automated capture of specs, price points, and availability signals.",
+      "Compared configurations to surface best-value performance tiers.",
+      "Built a clean dataset for downstream pricing analytics.",
+    ],
+    tags: ["Web Scraping", "Market Analysis", "Automation"],
+    kpis: [
+      { label: "Listings Captured", value: "2k+" },
+      { label: "Pricing Tiers", value: "5" },
+      { label: "Refresh Cadence", value: "Weekly" },
+    ],
+    category: ["automation", "analytics"],
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80",
+    link: "Gaming_Laptop_Webscraping_Market_Analysis/",
   },
   {
     id: "bankruptcy-system",
@@ -90,75 +203,6 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80",
     link: "Accrual_Anamoly_Final_Project/Final%20Project/Accrual_Anomaly_Analysis_Report%20final.pdf",
-  },
-  {
-    id: "doubledo-gaming-chatbot",
-    title: "AI Chatbot for Gaming Industry",
-    subtitle: "Gaming Hardware Expert · Chatbase AI",
-    date: "Dec 2025",
-    description:
-      "A 24/7 gaming hardware expert assistant that delivers build recommendations, compatibility checks, and deal alerts.",
-    highlights: [
-      "Achieved an estimated 85%+ query resolution rate without human escalation.",
-      "Translated technical specs into budget-aware recommendations.",
-      "Designed FAQ coverage and quick actions for common customer needs.",
-    ],
-    tags: ["Conversational AI", "Chatbase", "Customer Support"],
-    kpis: [
-      { label: "Resolution Rate", value: "85%+" },
-      { label: "Response Time", value: "<3s" },
-      { label: "FAQ Coverage", value: "60+" },
-    ],
-    category: ["automation"],
-    image:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
-    link: "Chatbot_Project/Doubledo_Gaming_AI_Chatbot_Report.pdf",
-  },
-  {
-    id: "nacho-nirvana-chatbot",
-    title: "Food Delivery Chatbot",
-    subtitle: "Chatfuel · Automated Ordering",
-    date: "Dec 2025",
-    description:
-      "Facebook Messenger chatbot for nacho ordering with dynamic pricing, customization, and order confirmation.",
-    highlights: [
-      "Built a 12-block conversational flow covering the full order journey.",
-      "Implemented attribute-based pricing for size, toppings, drinks, and sides.",
-      "Delivered menu navigation for classic vs loaded nacho categories.",
-    ],
-    tags: ["Chatbot", "Chatfuel", "Automation"],
-    kpis: [
-      { label: "Conversation Blocks", value: "12" },
-      { label: "Dynamic Pricing", value: "Yes" },
-      { label: "Order Flow", value: "End-to-End" },
-    ],
-    category: ["automation"],
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
-    link: "Chatbot_Project/Nacho_Nirvana_Fixed_Chatbot_Report.pdf",
-  },
-  {
-    id: "gaming-laptop",
-    title: "Web Crawling Market Analysis",
-    subtitle: "Web Automation · Pricing Intelligence",
-    date: "Nov 2026",
-    description:
-      "Web-crawled laptop listings to benchmark price-performance and track competitive market positioning.",
-    highlights: [
-      "Automated capture of specs, price points, and availability signals.",
-      "Compared configurations to surface best-value performance tiers.",
-      "Built a clean dataset for downstream pricing analytics.",
-    ],
-    tags: ["Web Scraping", "Market Analysis", "Automation"],
-    kpis: [
-      { label: "Listings Captured", value: "2k+" },
-      { label: "Pricing Tiers", value: "5" },
-      { label: "Refresh Cadence", value: "Weekly" },
-    ],
-    category: ["automation", "analytics"],
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80",
-    link: "Gaming_Laptop_Webscraping_Market_Analysis/",
   },
 ];
 
