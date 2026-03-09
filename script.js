@@ -1,5 +1,27 @@
 const projects = [
   {
+    id: "financial-fraud-detection",
+    title: "Financial Fraud Detection at Scale",
+    subtitle: "Big Data Analytics & MLOps · Apache Spark · XGBoost · MLflow",
+    date: "Jan 2026 – Mar 2026",
+    description:
+      "Distributed fraud detection pipeline using Apache Spark, scikit-learn, XGBoost, and MLflow on the IEEE-CIS Fraud Detection dataset (590K+ transactions). Champion model achieved AUC-ROC 0.946.",
+    highlights: [
+      "Champion XGBoost model AUC-ROC 0.946 with MLflow experiment tracking and model versioning.",
+      "Built end-to-end Spark pipeline: ingestion, preprocessing, EDA, modeling on IEEE-CIS dataset.",
+      "Deployed parameterized scoring pipeline with Unity Catalog, Delta Lake, and widget-based scoring.",
+    ],
+    tags: ["Apache Spark", "XGBoost", "MLflow", "Big Data", "MLOps"],
+    kpis: [
+      { label: "AUC-ROC", value: "0.946" },
+      { label: "Transactions", value: "590K+" },
+      { label: "Features", value: "400+" },
+    ],
+    category: ["ml", "analytics"],
+    image: "https://raw.githubusercontent.com/Debadri1999/Financial-Fraud-Detection-at-Scale/main/assets/hero_fraud_detection.png",
+    link: "https://github.com/Debadri1999/Financial-Fraud-Detection-at-Scale",
+  },
+  {
     id: "eris",
     title: "Economic Regime Intelligence System (ERIS)",
     subtitle: "Regime-Aware ML · Asset Pricing Intelligence",
