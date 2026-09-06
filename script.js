@@ -317,12 +317,14 @@ const initReveal = () => {
 const animateCounters = () => {
   const counters = document.querySelectorAll("[data-count]");
   counters.forEach((counter) => {
-    const target = Number(counter.dataset.count || 0);
+    const target = Number(counter.getAttribute("data-count") || 0);
+    // Only use explicit data-suffix — never auto-pick "%" from the number size
+    const suffix = counter.getAttribute("data-suffix") || "";
     let current = 0;
     const step = Math.max(1, Math.round(target / 60));
     const tick = () => {
       current = Math.min(target, current + step);
-      counter.textContent = `${current}${target > 10 ? "%" : "+"}`;
+      counter.textContent = `${current}${suffix}`;
       if (current < target) requestAnimationFrame(tick);
     };
     tick();
@@ -439,10 +441,33 @@ const initSpotlight = () => {
   setInterval(rotate, 4000);
 };
 
+const fitHeroHighlight = () => {
+  const el = document.getElementById("hero-highlight");
+  if (!el) return;
+  const parent = el.parentElement;
+  if (!parent) return;
+
+  el.style.whiteSpace = "nowrap";
+  el.style.fontWeight = "700";
+  el.style.transform = "none";
+  el.style.fontSize = "17px";
+
+  const available = parent.clientWidth;
+  if (available <= 0) return;
+
+  let size = 17;
+  while (size > 11 && el.scrollWidth > available) {
+    size -= 0.25;
+    el.style.fontSize = `${size}px`;
+  }
+};
+
 initParticles();
 initReveal();
 animateCounters();
 initSpotlight();
+fitHeroHighlight();
+window.addEventListener("resize", fitHeroHighlight);
 
 if (page === "projects") {
   renderProjectsPage();
